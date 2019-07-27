@@ -13,7 +13,7 @@ public class Leer_txt {
         
     }
     public void leer(){
-        
+        System.out.println("no es nada");
         try {
             FileReader tx = new FileReader(ruta);
             BufferedReader br = new BufferedReader(tx);
