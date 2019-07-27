@@ -1,10 +1,31 @@
 
 public class Ventana extends javax.swing.JFrame {
 
+    //Libros
+    Libro libro1 = new Libro("Matematica discreta 1", "Fernando Perez", "101-AAA", 0);
+    Libro libro2 = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 0);
+    Libro libro3 = new Libro("Magia con Javascript", "Pedro Peña", "408-DAA", 2);
+        
+    //Estudiantes
+    Estudiante estudiante1 = new Estudiante(200812345, "Estudiante nombre 200812345", 1);
+    Estudiante estudiante2 = new Estudiante(201312345, "Estudiante nombre 201312345", 1);
+    Estudiante estudiante3 = new Estudiante(200845872, "Estudiante nombre 200845872", 5);
+    Estudiante estudiante4 = new Estudiante(201345872, "Estudiante nombre 201345872", 5);
+    Estudiante estudiante5 = new Estudiante(200898547, "Estudiante nombre 200898547", 5);
+        
     public Ventana() {
         initComponents();
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+        
+        //Prestamos
+        estudiante1.libros[0] = new Libro("Matematica discreta 1", "Fernando Perez", "101-AAA", 1);
+        estudiante1.libros[1] = new Libro("Matematica discreta 1", "Fernando Perez", "101-AAA", 1);
+        estudiante4.libros[0] = new Libro("Matematica discreta 1", "Fernando Perez", "102-AAA", 1);
+        estudiante5.libros[1] = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 1);
+        estudiante4.libros[1] = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 1);
+        estudiante4.libros[2] = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 1);
+    
     }
 
     @SuppressWarnings("unchecked")

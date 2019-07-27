@@ -4,18 +4,21 @@
  * @author César Reginaldo Tzoc Alvarado
  *         Carnet: 201430927
  */
-public class Estudiantes {
+public class Estudiante {
     
     String nombre;
     int carnet;
     int carrera;
     String fechaNacimiento;
+    Libro[] libros = new Libro[3];
     
-    public Estudiantes(String nombre, int carnet, int carrera, String fechaNacimiento){
-    this.nombre = nombre;
-    this.carnet = carnet;
-    this.carrera = carrera;
-    this.fechaNacimiento = fechaNacimiento;
+    public Estudiante(int carnet, String nombre, int carrera){
+        this.carnet = carnet;
+        this.nombre = nombre;
+        this.carrera = carrera;
+        for(int i=0; i<3; i++){
+            libros[i] = null;
+        }
     }
 
     public String getNombre() {
@@ -30,10 +33,10 @@ public class Estudiantes {
         return carrera;
     }
 
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
+    public Libro[] getLibros() {
+        return libros;
     }
-
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -46,13 +49,12 @@ public class Estudiantes {
         this.carrera = carrera;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setLibros(Libro[] libros) {
+        this.libros = libros;
     }
-    
+     
     public String toString(){
-        String mensaje = "Nombre: "+nombre+"Carnet: "+carnet+"\nCarrera: "+carrera+
-                "Fecha de Naciemiento"+fechaNacimiento;
+        String mensaje = "Nombre: "+nombre+" Carnet: "+carnet+"\nCarrera: "+carrera;
         return mensaje;
     } 
 }

@@ -3,7 +3,7 @@
  *
  * @author yefer
  */
-public class libro {
+public class Libro {
     
     String titulo;
     String autor;
@@ -12,7 +12,7 @@ public class libro {
     String fechaPublicacion;
     String editorial;
     
-    public libro(String titulo, String autor, String codigo, int cantidad){
+    public Libro(String titulo, String autor, String codigo, int cantidad){
         this.titulo=titulo;
         this.autor=autor;
         this.codigo=codigo;
