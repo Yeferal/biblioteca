@@ -1,6 +1,11 @@
 
 public class Ventana extends javax.swing.JFrame {
 
+    //Ventanas
+    VentanaEstudiantes ventanaEstudiantes = new VentanaEstudiantes(this);
+    VentanaPrestamos ventanaPrestamos = new VentanaPrestamos(this);
+    VentanaReportes ventanaReportes = new VentanaReportes(this);
+
     //Libros
     Libro libro1 = new Libro("Matematica discreta 1", "Fernando Perez", "101-AAA", 0);
     Libro libro2 = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 0);
@@ -34,6 +39,7 @@ public class Ventana extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Biblioteca - CUNOC");
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Biblioteca Centro Universitario de Occidente CUNOC");
@@ -120,16 +126,22 @@ public class Ventana extends javax.swing.JFrame {
     private void BtnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReportesActionPerformed
         // TODO add your handling code here:
         System.out.println("Reportes");
+        ventanaReportes.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_BtnReportesActionPerformed
 
     private void BtnPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPrestamosActionPerformed
         // TODO add our handling code here:
         System.out.println("Prestamos");
+        ventanaPrestamos.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_BtnPrestamosActionPerformed
 
     private void BtnEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEstudiantesActionPerformed
         // TODO add your handling code here:
         System.out.println("Estudiantes");
+        ventanaEstudiantes.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_BtnEstudiantesActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
