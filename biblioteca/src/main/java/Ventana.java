@@ -1,6 +1,10 @@
 
-public class Ventana extends javax.swing.JFrame {
 
+
+public class Ventana extends javax.swing.JFrame {
+    
+    VentanaEstudiantes ventanaEstudiantes = new VentanaEstudiantes();
+    
     //Libros
     Libro libro1 = new Libro("Matematica discreta 1", "Fernando Perez", "101-AAA", 0);
     Libro libro2 = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 0);
@@ -17,6 +21,7 @@ public class Ventana extends javax.swing.JFrame {
         initComponents();
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+        //ventanaEstudiantes.setLocationRelativeTo(null);
         
         //Prestamos
         Prestamo prestamo1 = new Prestamo(estudiante1, libro1, "2019-07-24");
@@ -130,6 +135,8 @@ public class Ventana extends javax.swing.JFrame {
     private void BtnEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEstudiantesActionPerformed
         // TODO add your handling code here:
         System.out.println("Estudiantes");
+        ventanaEstudiantes.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_BtnEstudiantesActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
