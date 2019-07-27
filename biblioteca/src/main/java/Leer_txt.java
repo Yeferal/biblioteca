@@ -35,7 +35,7 @@ public class Leer_txt {
                 break;
             case "PRESTAMO":
                 prestamo();
-                
+                datosPrestamo(br.readLine(),br.readLine(),br.readLine());
                 break;
         //System.out.println("no es nada");
             default:
