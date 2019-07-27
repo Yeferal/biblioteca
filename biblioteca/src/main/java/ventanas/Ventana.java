@@ -19,13 +19,7 @@ public class Ventana extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
         //Prestamos
-        estudiante1.libros[0] = new Libro("Matematica discreta 1", "Fernando Perez", "101-AAA", 1);
-        estudiante1.libros[1] = new Libro("Matematica discreta 1", "Fernando Perez", "101-AAA", 1);
-        estudiante4.libros[0] = new Libro("Matematica discreta 1", "Fernando Perez", "102-AAA", 1);
-        estudiante5.libros[1] = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 1);
-        estudiante4.libros[1] = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 1);
-        estudiante4.libros[2] = new Libro("Matematica discreta 2", "Fernando Perez", "102-AAA", 1);
-    
+        Prestamo prestamo1 = new Prestamo(estudiante1, libro1, "2019-07-24");
     }
 
     @SuppressWarnings("unchecked")
