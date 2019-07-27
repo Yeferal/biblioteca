@@ -8,12 +8,13 @@ import java.io.*;
 public class Leer_txt {
     
     String ruta= "practica1.txt";
+    Datos datos = new Datos();
     public Leer_txt(){
         leer();
         
     }
     public void leer(){
-        System.out.println("no es nada");
+        
         try {
             FileReader tx = new FileReader(ruta);
             BufferedReader br = new BufferedReader(tx);
@@ -39,35 +40,20 @@ public class Leer_txt {
                 break;
         //System.out.println("no es nada");
             default:
-                break;
-        }
-                
-            }
-            
-            
+               
+        }              
+            }  
+            datos.ver();
             br.close();
+            
             
         } catch (Exception e) {
             
         }
+        datos.ver();
         
     }
-    public void tipo(String palabra){
-        switch (palabra) {
-            case "LIBRO":
-                libro();
-                break;
-            case "ESTUDIANTE":
-                estudiante();
-                break;
-            case "PRESTAMO":
-                prestamo();
-                break;
-        //System.out.println("no es nada");
-            default:
-                break;
-        }
-    }
+
     
     public void libro(){
         System.out.println("es Libro");
@@ -80,20 +66,17 @@ public class Leer_txt {
     }
     
     public void datoslibro(String title, String autor, String codigo, String candidad){
-        System.out.println("titulo: "+title.substring(6));
-        System.out.println("autor: "+autor.substring(5));
-        System.out.println("codigo: "+codigo.substring(6));
-        System.out.println("cantidad: "+candidad.substring(8));
+
+        datos.nuevoLibro(title.substring(7), autor.substring(6), codigo.substring(7), Integer.parseInt(candidad.substring(9)));
+        
     }
     public void datosEstudiante(String carnet, String nombre, String carrera){
-        System.out.println("carne: "+carnet.substring(6));
-        System.out.println("nombre: "+nombre.substring(6));
-        System.out.println("carrera: "+carrera.substring(7));
+
+
+          datos.nuevoEstudiante(nombre.substring(7),Integer.parseInt(carnet.substring(7)), Integer.parseInt(carrera.substring(8)), " null");
     }
     public void datosPrestamo(String codigo, String carnet, String fecha){
-        System.out.println("codigolibro: "+codigo.substring(11));
-        System.out.println("carnet "+carnet.substring(6));
-        System.out.println("Fecha: "+fecha.substring(5));
+
     }
     
 }
